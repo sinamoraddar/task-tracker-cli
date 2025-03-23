@@ -57,7 +57,15 @@ def read_json():
 
 def add_task(description):
     data = read_json()
-    data.append({"id": str(uuid.uuid4()), "description": description})
+    data.append(
+        {
+            "id": len(data) + 1,
+            "description": description,
+            "status": "todo",
+            "createdAt": datetime.now().isoformat(),
+            "updatedAt": datetime.now().isoformat(),
+        }
+    )
     with open("tasks.json", "w") as file:
         json.dump({"tasks": data}, file)
 
