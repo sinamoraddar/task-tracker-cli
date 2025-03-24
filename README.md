@@ -1,4 +1,4 @@
 # task-tracker-cli
-- [ ] Python (in progress)
+- [x] Python (in progress)
 - [ ] Go
 - [ ] Node.js
